@@ -1,0 +1,28 @@
+h1{
+    color:gray;
+    font-size: 16px;
+}
+
+
+.shape-avatar{
+    width:100%;
+    min-width: 100px;
+    max-width: 300px;
+    margin: auto;
+    border-radius: none;
+    border: none;
+}
+.buttonProduct{
+    display: flex;
+    justify-content: space-around;
+    width: 140px;
+}
+
+.imageCol{
+    width: 300px;
+    height: 250px;
+    margin: auto;
+}
+.colInRow{
+    margin: auto;
+}

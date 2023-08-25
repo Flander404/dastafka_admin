@@ -33,6 +33,8 @@ import ava3 from "../assets/images/logo-slack.svg";
 import ava5 from "../assets/images/logo-jira.svg";
 import ava6 from "../assets/images/logo-invision.svg";
 import pencil from "../assets/images/pencil.svg";
+import IntoProducts from "./IntoProducts.js";
+import "./IntoProducts.css";
 
 const { Title } = Typography;
 
@@ -58,20 +60,20 @@ const formProps = {
 // project table start
 const project = [
   {
-    title: "COMPANIES",
+    title: "Category",
     dataIndex: "name",
     width: "32%",
   },
   {
-    title: "BUDGET",
+    title: "Marka",
     dataIndex: "age",
   },
   {
-    title: "STATUS",
+    title: "Brend",
     dataIndex: "address",
   },
   {
-    title: "COMPLETION",
+    title: "Price",
     dataIndex: "completion",
   },
 ];
@@ -83,32 +85,29 @@ const dataproject = [
       <>
         <Avatar.Group>
           <Avatar className="shape-avatar" src={ava1} size={25} alt="" />
-          <div className="avatar-info">
-            <Title level={5}>Spotify Version</Title>
-          </div>
         </Avatar.Group>
       </>
     ),
     age: (
       <>
-        <div className="semibold">$14,000</div>
+        <div className="semibold">M200</div>
       </>
     ),
     address: (
       <>
-        <div className="text-sm">working</div>
+        <div className="text-sm">option</div>
       </>
     ),
     completion: (
       <>
         <div className="ant-progress-project">
-          <Progress percent={30} size="small" />
-          <span>
-            <Link to="/">
-              <img src={pencil} alt="" />
-            </Link>
-          </span>
+          82394689$
+          <div className="buttonProduct">
+            <button>Change</button>
+            <button>Delete</button>
+          </div>
         </div>
+        
       </>
     ),
   },
@@ -119,15 +118,12 @@ const dataproject = [
       <>
         <Avatar.Group>
           <Avatar className="shape-avatar" src={ava2} size={25} alt="" />
-          <div className="avatar-info">
-            <Title level={5}>Progress Track</Title>
-          </div>
         </Avatar.Group>
       </>
     ),
     age: (
       <>
-        <div className="semibold">$3,000</div>
+        <div className="semibold">M200</div>
       </>
     ),
     address: (
@@ -138,12 +134,11 @@ const dataproject = [
     completion: (
       <>
         <div className="ant-progress-project">
-          <Progress percent={10} size="small" />
-          <span>
-            <Link to="/">
-              <img src={pencil} alt="" />
-            </Link>
-          </span>
+          82394689$
+          <div className="buttonProduct">
+            <button>Change</button>
+            <button>Delete</button>
+          </div>
         </div>
       </>
     ),
@@ -155,9 +150,6 @@ const dataproject = [
       <>
         <Avatar.Group>
           <Avatar className="shape-avatar" src={ava3} size={25} alt="" />
-          <div className="avatar-info">
-            <Title level={5}> Jira Platform Errors</Title>
-          </div>
         </Avatar.Group>
       </>
     ),
@@ -174,12 +166,11 @@ const dataproject = [
     completion: (
       <>
         <div className="ant-progress-project">
-          <Progress percent={100} size="small" format={() => "done"} />
-          <span>
-            <Link to="/">
-              <img src={pencil} alt="" />
-            </Link>
-          </span>
+          82394689$
+          <div className="buttonProduct">
+            <button>Change</button>
+            <button>Delete</button>
+          </div>
         </div>
       </>
     ),
@@ -191,9 +182,6 @@ const dataproject = [
       <>
         <Avatar.Group>
           <Avatar className="shape-avatar" src={ava5} size={25} alt="" />
-          <div className="avatar-info">
-            <Title level={5}> Launch new Mobile App</Title>
-          </div>
         </Avatar.Group>
       </>
     ),
@@ -210,17 +198,11 @@ const dataproject = [
     completion: (
       <>
         <div className="ant-progress-project">
-          <Progress
-            percent={50}
-            size="small"
-            status="exception"
-            format={() => "50%"}
-          />
-          <span>
-            <Link to="/">
-              <img src={pencil} alt="" />
-            </Link>
-          </span>
+          82394689$
+          <div className="buttonProduct">
+            <button>Change</button>
+            <button>Delete</button>
+          </div>
         </div>
       </>
     ),
@@ -232,9 +214,6 @@ const dataproject = [
       <>
         <Avatar.Group>
           <Avatar className="shape-avatar" src={ava5} size={25} alt="" />
-          <div className="avatar-info">
-            <Title level={5}>Web Dev</Title>
-          </div>
         </Avatar.Group>
       </>
     ),
@@ -251,12 +230,11 @@ const dataproject = [
     completion: (
       <>
         <div className="ant-progress-project">
-          <Progress percent={80} size="small" />
-          <span>
-            <Link to="/">
-              <img src={pencil} alt="" />
-            </Link>
-          </span>
+          82394689$
+          <div className="buttonProduct">
+            <button>Change</button>
+            <button>Delete</button>
+          </div>
         </div>
       </>
     ),
@@ -268,9 +246,6 @@ const dataproject = [
       <>
         <Avatar.Group>
           <Avatar className="shape-avatar" src={ava6} size={25} alt="" />
-          <div className="avatar-info">
-            <Title level={5}>Redesign Online Store</Title>
-          </div>
         </Avatar.Group>
       </>
     ),
@@ -287,13 +262,12 @@ const dataproject = [
     completion: (
       <>
         <div className="ant-progress-project">
-          <Progress percent={0} size="small" />
-          <span>
-            <Link to="/">
-              <img src={pencil} alt="" />
-            </Link>
-          </span>
-        </div>
+          82394689$
+          <div className="buttonProduct">
+            <button>Change</button>
+            <button>Delete</button>
+          </div>
+        </div>    
       </>
     ),
   },
@@ -305,6 +279,7 @@ function Tables() {
   return (
     <>
       <div className="tabled">
+      <IntoProducts/> <br />
         <Row gutter={[24, 0]}>
           <Col xs="24" xl={24}>
 
@@ -344,9 +319,12 @@ function Tables() {
             </Card>
           </Col>
         </Row>
+
       </div>
     </>
   );
+
 }
 
 export default Tables;
+

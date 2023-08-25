@@ -378,7 +378,7 @@ const dataproject = [
     ),
     age: (
       <>
-        <div className="semibold">$14,000</div>
+        <div className="semibold">M200</div>
       </>
     ),
     address: (

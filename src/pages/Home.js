@@ -174,7 +174,7 @@ function Home() {
     {
       img: ava1,
       Title: "Soft UI Shopify Version",
-      bud: "$14,000",
+      bud: "M200",
       progress: <Progress percent={60} size="small" />,
       member: (
         <div className="avatar-group mt-2">
